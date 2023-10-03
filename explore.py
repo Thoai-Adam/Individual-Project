@@ -72,7 +72,7 @@ def calculate_t_test(df, selected_features, target_variable, significance_level=
 
 # Example usage:
 # Assuming df is your DataFrame, selected_features is your list of features, and target_variable is the target variable.
-calculate_t_test(df, selected_features, target_variable)
+#calculate_t_test(df, selected_features, target_variable)
 
 
 
