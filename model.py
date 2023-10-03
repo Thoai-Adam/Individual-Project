@@ -27,7 +27,7 @@ def train_and_evaluate_models(X_train, Y_train, X_validation, Y_validation):
 
     # Decision Tree Classifier
     tree = DecisionTreeClassifier(criterion='entropy', random_state=42)
-    trbee.fit(X_train, Y_train)
+    tree.fit(X_train, Y_train)
     models.append(tree)
 
     # Random Forest Classifier
