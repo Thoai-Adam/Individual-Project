@@ -43,36 +43,38 @@ def split_data_and_create_baseline(X, Y, random_state=42):
     return X_train, Y_train, X_validation, Y_validation, X_test, Y_test, accuracy
 
 
-def calculate_point_biserial_correlation(df, selected_features, target_variable, significance_level=0.05):
-    """
-    Calculate point-biserial correlation coefficients and p-values for selected features
-    with respect to the target variable.
 
-    Parameters:
-    - df (DataFrame): The DataFrame containing the data.
-    - selected_features (list): A list of feature names to calculate correlations for.
-    - target_variable (str): The name of the target variable.
-    - significance_level (float): The significance level for determining statistical significance.
 
-    Returns:
-    - correlation_results (list of tuples): A list of tuples containing (feature, coefficient, p-value).
-    """
-    correlation_results = []
+
+
+# Call the function and provide the DataFrame and other arguments
+# P values for the correlation test is below .05
+def calculate_t_test(df, selected_features, target_variable, significance_level=0.05):
+    t_test_results = []
     for feature in selected_features:
-        coefficient, p_value = stats.pointbiserialr(df[feature], df[target_variable])
-        correlation_results.append((feature, coefficient, p_value))
+        group_0 = df[df[target_variable] == 0][feature]
+        group_1 = df[df[target_variable] == 1][feature]
 
-    print("Correlation Results:")
-    for feature, coefficient, p_value in correlation_results:
-        print(f'Correlation between {feature} and {target_variable}:')
-        print(f'Point-Biserial Correlation Coefficient: {coefficient:.4f}')
+        t_stat, p_value = stats.ttest_ind(group_0, group_1)
+        t_test_results.append((feature, t_stat, p_value))
+
+    print("T-Test Results:")
+    for feature, t_stat, p_value in t_test_results:
+        print(f'T-Test between {feature} and {target_variable}:')
+        print(f'T-Statistic: {t_stat:.4f}')
         print(f'P-value: {p_value:.4f}')
         print('')
 
         if p_value < significance_level:
-            print(f'Correlation between {feature} and {target_variable} is statistically significant.')
+            print(f'T-Test between {feature} and {target_variable} is statistically significant.')
         else:
-            print(f'Correlation between {feature} and {target_variable} is not statistically significant.')
+            print(f'T-Test between {feature} and {target_variable} is not statistically significant.')
+
+# Example usage:
+# Assuming df is your DataFrame, selected_features is your list of features, and target_variable is the target variable.
+calculate_t_test(df, selected_features, target_variable)
+
+
 
 
 
