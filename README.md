@@ -1,4 +1,3 @@
-![image](https://github.com/hitzuMan/Individual-Project/assets/118470135/25671ec0-f50d-4eb9-8b3c-2ca3b1f9e3fd)
 
 
 
