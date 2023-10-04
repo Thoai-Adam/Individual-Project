@@ -136,6 +136,8 @@ def bivariate_analysis(df):
     
     
 # Function to perform multivariate analysis
+import plotly.express as px
+
 def multivariate(df):
     # Create a DataFrame with the selected features and diagnosis
     selected_features = ['concave points_mean', 'concave points_worst', 'perimeter_worst', 'radius_worst']
@@ -158,12 +160,34 @@ def multivariate(df):
     fig.update_layout(legend_title_text='Diagnosis')
     fig.update_traces(marker=dict(size=4))
 
+    # Calculate centroids for 'Malignant' and 'Benign'
+    centroid_malignant = df_selected[df_selected['diagnosis'] == 1][selected_features].mean()
+    centroid_benign = df_selected[df_selected['diagnosis'] == 0][selected_features].mean()
+
+    # Add centroids to the plot
+    fig.add_scatter3d(x=[centroid_malignant['concave points_mean']], 
+                      y=[centroid_malignant['concave points_worst']], 
+                      z=[centroid_malignant['perimeter_worst']],
+                      mode='markers',
+                      marker=dict(size=10, symbol='cross', color='red'),
+                      name='Malignant Centroid')
+
+    fig.add_scatter3d(x=[centroid_benign['concave points_mean']], 
+                      y=[centroid_benign['concave points_worst']], 
+                      z=[centroid_benign['perimeter_worst']],
+                      mode='markers',
+                      marker=dict(size=10, symbol='cross', color='green'),
+                      name='Benign Centroid')
+
     # Show the interactive plot
     fig.show()
-    
-    
-# Plot for concave points_mean
 
+
+
+    
+    
+
+# Plot for concave points_mean
 def plot_histogram_by_concave_points_mean(df):
     # Define custom colors for 'Malignant' and 'Benign'
     custom_palette = {1: 'darkorange', 0: 'blue'}
@@ -184,52 +208,65 @@ def plot_histogram_by_concave_points_mean(df):
     plt.show()
 
 # Plot for radius_worst
-
 def plot_histogram_by_radius_worst(df):
-    #Define custom colors for 'Malignant' and 'Benign'
-    custom_palette = {1:'darkorange', 0:'blue'}
+    # Define custom colors for 'Malignant' and 'Benign'
+    custom_palette = {1: 'darkorange', 0: 'blue'}
+
     # Create histogram plot
-    plt.figure(figsize=(8,6)
+    plt.figure(figsize=(8, 6))
     sns.histplot(data=df, x='radius_worst', hue='diagnosis', bins=30, kde=True, palette=custom_palette)
+
     # Set plot labels and title
     plt.xlabel('Radius Worst')
-    plt.ylabel('Diagnosis')
+    plt.ylabel('Frequency')
     plt.title('Histogram Plot of Radius Worst by Diagnosis')
+
     # Add a legend
     plt.legend(title='Diagnosis', labels=['Malignant (M)', 'Benign (B)'])
+
     # Show the plot
     plt.show()
-               
-# Plot for perimeter_worst
 
+# Plot for perimeter_worst
 def plot_histogram_by_perimeter_worst(df):
-    custom_palette = {1:'darkorange', 0:'blue'}
+    # Define custom colors for 'Malignant' and 'Benign'
+    custom_palette = {1: 'darkorange', 0: 'blue'}
+
     # Create histogram plot
-    plt.figure(figsize=(8,6)
-    sns.histplot(data=df, x='perimeter_worst', hue='diagnosis', bins = 30, kde=True, palette=custom_palette)
+    plt.figure(figsize=(8, 6))
+    sns.histplot(data=df, x='perimeter_worst', hue='diagnosis', bins=30, kde=True, palette=custom_palette)
+
     # Set plot labels and title
     plt.xlabel('Perimeter Worst')
-    plt.ylabel('Diagnosis')
+    plt.ylabel('Frequency')
     plt.title('Histogram Plot of Perimeter Worst by Diagnosis')
+
     # Add a legend
-    plt.legend(title='Diagnosis', labels = {'Malignant (M)', 'Benign (B)'])
+    plt.legend(title='Diagnosis', labels=['Malignant (M)', 'Benign (B)'])
+
     # Show the plot
     plt.show()
 
-# Plot for concave points_mean
+# Plot for concave points_worst
 def plot_histogram_by_concave_points_worst(df):
-    custom_palette = {1:'darkorange', 0:'blue}
-    # create histogram plot
-    plt.figure(figsize=(8,6)
-    sns.histplot(data=df, x='concave points_worst', hue='diagnosis', bins = 30, kde=True, palette=custom_palette)
-    #set plot labels and title
+    # Define custom colors for 'Malignant' and 'Benign'
+    custom_palette = {1: 'darkorange', 0: 'blue'}
+
+    # Create histogram plot
+    plt.figure(figsize=(8, 6))
+    sns.histplot(data=df, x='concave points_worst', hue='diagnosis', bins=30, kde=True, palette=custom_palette)
+
+    # Set plot labels and title
     plt.xlabel('Concave Points Worst')
-    plt.ylabel('Diagnosis')
+    plt.ylabel('Frequency')
     plt.title('Histogram Plot of Concave Points Worst by Diagnosis')
+
     # Add a legend
-    plt.legend(title='Diagnosis', labels={'Malignant (M)', 'Benign (B)'])
+    plt.legend(title='Diagnosis', labels=['Malignant (M)', 'Benign (B)'])
+
     # Show the plot
     plt.show()
+
 
     
     
