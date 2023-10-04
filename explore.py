@@ -134,7 +134,39 @@ def bivariate_analysis(df):
     
     
 # Function to perform multivariate analysis
-def multivariate_analysis(df):
-    sns.pairplot(df, hue='diagnosis', vars=['concave points_mean', 'radius_worst', 'perimeter_worst', 'concave points_worst'])
-    plt.suptitle('Multivariate Analysis of Selected Features by Diagnosis')
-    plt.show()
+def multivariate(df):
+    # Create a DataFrame with the selected features and diagnosis
+    selected_features = ['concave points_mean', 'concave points_worst', 'perimeter_worst', 'radius_worst']
+    df_selected = df[selected_features + ['diagnosis']]
+
+    # Define color mapping for diagnosis
+    color_mapping = {0: 'blue', 1: 'orange'}
+
+    # Create the 3D scatter plot with color mapping
+    fig = px.scatter_3d(df_selected, x='concave points_mean', y='concave points_worst', z='perimeter_worst',
+                        color='diagnosis', symbol='diagnosis', opacity=0.7,
+                        color_discrete_map=color_mapping,
+                        labels={'concave points_mean': 'Concave Points Mean',
+                                'concave points_worst': 'Concave Points Worst',
+                                'perimeter_worst': 'Perimeter Worst',
+                                'radius_worst': 'Radius Worst'},
+                        title='3D Cluster Plot of Selected Features by Diagnosis')
+
+    # Customize the layout
+    fig.update_layout(legend_title_text='Diagnosis')
+    fig.update_traces(marker=dict(size=4))
+
+    # Show the interactive plot
+    fig.show()
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
