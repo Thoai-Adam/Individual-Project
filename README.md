@@ -25,6 +25,19 @@ I acquired data via API through this Kaggle [link](https://www.kaggle.com/datase
 | concave points_worst          | Numeric         | Largest number of concave points                         | Numeric (square millimeters) |
 | diagnosis          | Categorical     | Diagnosis of tumor                             | Categorical (Malignant 'M', Benign 'B') |
 
+
+### Hypothesis
+
+Hypothesis 1: Concave points_mean have a positive relationship with diagnosis
+
+Hypothesis 2: radius_worst has a positive relationship with diagnosis
+
+Hypothesis 3: perimeter_worst has a positive relationship with diagnosis
+
+Hypothesis 4: Concave points_worst have a positive relationship with diagnosis
+
+
+
 ### Methodology
 
 I employed a multi-step approach to build an effective breast cancer prediction model:
