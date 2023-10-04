@@ -1,6 +1,8 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
+import plotly.express as px
+
 import os
 import opendatasets as od
 import scipy.stats as stats
