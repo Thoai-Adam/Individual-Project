@@ -1,4 +1,4 @@
-![image](https://github.com/hitzuMan/Individual-Project/assets/118470135/cba3786a-5fee-4b28-9a4f-d6718acf5de9)
+![image](https://github.com/hitzuMan/Individual-Project/assets/118470135/19e8c3ab-e0cf-4045-81e8-25ce133ae4d3)
 
 
 
