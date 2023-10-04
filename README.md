@@ -1,3 +1,8 @@
+![image](https://github.com/hitzuMan/Individual-Project/assets/118470135/414ead73-26a1-48b3-ab34-74e9fa639b9c)
+
+
+
+
 # Breast Cancer Prediction Project
 
 ## Abstract
