@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+![image](https://github.com/hitzuMan/Individual-Project/assets/118470135/19e8c3ab-e0cf-4045-81e8-25ce133ae4d3)
+>>>>>>> 53e11e2b83a8b8778e570ec02ef29093157da0ef
 
 
 
