@@ -35,7 +35,8 @@ I employed a multi-step approach to build an effective breast cancer prediction 
 
 3. **[Model Building](https://github.com/hitzuMan/Individual-Project/blob/main/model.py)**: Several machine learning algorithms were explored, including Logistic Regression, Decision Trees, Random Forests, K-Nearest Neighbors, and XGBoost. Hyperparameter tuning and cross-validation were performed to optimize model performance.
 
-4. **[Evaluation](https://github.com/hitzuMan/Individual-Project/blob/main/final_notebook.ipynb)**: Models were evaluated using accuracy. The best-performing model was selected based on this metrics.
+4. **[Evaluation](https://github.com/hitzuMan/Individual-Project/blob/main/final_notebook.ipynb)**: Models were evaluated using accuracy. The best-performing model was selected based on this metric.
+
 
 ### Results
 
