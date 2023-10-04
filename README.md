@@ -13,7 +13,7 @@ Breast cancer is a critical healthcare concern, and early detection plays a pivo
 
 ### Dataset
 
-I utilized a dataset containing clinical and diagnostic information for breast cancer cases. This dataset comprises features such as mean radius, mean texture, mean smoothness, and more, which are used for classification.
+I acquired data via API through this Kaggle [link](https://www.kaggle.com/datasets/yasserh/breast-cancer-dataset) and utilized its clinical and diagnostic information for breast cancer cases. This dataset comprises features such as mean radius, mean texture, mean smoothness, and more, which are used for classification.
 
 ### Data Dictionary
 
