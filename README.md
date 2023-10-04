@@ -29,11 +29,11 @@ I acquired data via API through this Kaggle [link](https://www.kaggle.com/datase
 
 I employed a multi-step approach to build an effective breast cancer prediction model:
 
-1. **Data Preprocessing**: I conducted thorough data preprocessing, including handling missing values, encoding categorical data, and scaling features to ensure data quality and model compatibility.
+1. **[Data Preprocessing](https://github.com/hitzuMan/Individual-Project/blob/main/wrangle.py)**: I conducted thorough data preprocessing, including handling missing values, encoding categorical data, and scaling features to ensure data quality and model compatibility.
 
-2. **Feature Selection**: I selected a subset of informative features to reduce dimensionality and improve model efficiency. Key features included concave points_mean, radius_worst, perimeter_worst, and concave points_worst.
+2. **[Feature Selection](https://github.com/hitzuMan/Individual-Project/blob/main/explore.py)**: I selected a subset of informative features to reduce dimensionality and improve model efficiency. Key features included concave points_mean, radius_worst, perimeter_worst, and concave points_worst.
 
-3. **Model Building**: Several machine learning algorithms were explored, including Logistic Regression, Decision Trees, Random Forests, K-Nearest Neighbors, and XGBoost. Hyperparameter tuning and cross-validation were performed to optimize model performance.
+3. **[Model Building](https://github.com/hitzuMan/Individual-Project/blob/main/model.py)**: Several machine learning algorithms were explored, including Logistic Regression, Decision Trees, Random Forests, K-Nearest Neighbors, and XGBoost. Hyperparameter tuning and cross-validation were performed to optimize model performance.
 
 4. **Evaluation**: Models were evaluated using accuracy. The best-performing model was selected based on this metrics.
 
@@ -45,7 +45,7 @@ Our breast cancer prediction model achieved an accuracy rate of 95% on the test 
 
 This project underscores the significance of machine learning in breast cancer prediction and early detection. Our results highlight the potential for improved patient outcomes through accurate and timely diagnosis. I believe that the insights and methodologies presented here can contribute to ongoing efforts in the field of medical data analysis and healthcare.
 
-For detailed implementation and code, please refer to the project repository.
+For detailed implementation and code, please refer to the project [repository](https://github.com/hitzuMan/Individual-Project/tree/main).
 
 ---
 
