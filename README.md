@@ -28,13 +28,13 @@ I acquired data via API through this Kaggle [link](https://www.kaggle.com/datase
 
 ### Hypothesis
 
-Hypothesis 1: Concave points_mean have a positive relationship with diagnosis
+  Hypothesis 1: Concave points_mean have a positive relationship with diagnosis
 
-Hypothesis 2: radius_worst has a positive relationship with diagnosis
+  Hypothesis 2: radius_worst has a positive relationship with diagnosis
 
-Hypothesis 3: perimeter_worst has a positive relationship with diagnosis
+  Hypothesis 3: perimeter_worst has a positive relationship with diagnosis
 
-Hypothesis 4: Concave points_worst have a positive relationship with diagnosis
+  Hypothesis 4: Concave points_worst have a positive relationship with diagnosis
 
 
 
