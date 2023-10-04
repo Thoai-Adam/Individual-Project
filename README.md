@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
+
 ![image](https://github.com/hitzuMan/Individual-Project/assets/118470135/19e8c3ab-e0cf-4045-81e8-25ce133ae4d3)
->>>>>>> 53e11e2b83a8b8778e570ec02ef29093157da0ef
+
 
 
 
@@ -20,10 +19,10 @@ I utilized a dataset containing clinical and diagnostic information for breast c
 
 | **Column Name**    | **Data Type**   | **Description**                                 | **Measurement**               |
 |--------------------|-----------------|-------------------------------------------------|------------------------------|
-| concave points_mean        | Numeric         | Mean radius of the tumor                       | Numeric (millimeters)        |
-| radius_worst      | Numeric         | Mean texture of the tumor                      | Numeric (units)              |
-| perimeter_worst    | Numeric         | Mean perimeter of the tumor                    | Numeric (millimeters)        |
-| concave points_worst          | Numeric         | Mean area of the tumor                         | Numeric (square millimeters) |
+| concave points_mean        | Numeric         | Mean radius of the regions where the boundary of the cell's nucleus is curved inward                      | Numeric (millimeters)        |
+| radius_worst      | Numeric         | Largest distance from the center of the nucleus to its outer boundary                     | Numeric (units)              |
+| perimeter_worst    | Numeric         | Largest length of the cell nucleus                    | Numeric (millimeters)        |
+| concave points_worst          | Numeric         | Largest number of concave points                         | Numeric (square millimeters) |
 | diagnosis          | Categorical     | Diagnosis of tumor                             | Categorical (Malignant 'M', Benign 'B') |
 
 ### Methodology
